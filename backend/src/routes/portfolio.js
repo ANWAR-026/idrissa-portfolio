@@ -1,0 +1,18 @@
+import express from 'express';
+import * as portfolioController from '../controllers/portfolioController.js';
+
+const router = express.Router();
+
+// GET all portfolio items
+router.get('/', portfolioController.getAllProjects);
+
+// GET a single portfolio item
+router.get('/:id', portfolioController.getProjectById);
+
+// GET skills
+router.get('/skills/all', portfolioController.getSkills);
+
+// GET about info
+router.get('/about/info', portfolioController.getAboutInfo);
+
+export default router;
