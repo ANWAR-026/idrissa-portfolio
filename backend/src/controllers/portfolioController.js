@@ -26,19 +26,59 @@ const projects = [
   }
 ];
 
-const skills = [
-  { category: 'Frontend', items: ['React', 'Vue.js', 'HTML/CSS', 'JavaScript', 'Tailwind CSS'] },
-  { category: 'Backend', items: ['Node.js', 'Express', 'Python', 'MongoDB', 'PostgreSQL'] },
-  { category: 'Tools', items: ['Git', 'Docker', 'AWS', 'VS Code', 'Figma'] }
+const skillsData = {
+  categories: [
+    { category: 'Frontend', items: ['React', 'Vue.js', 'HTML/CSS', 'JavaScript', 'Tailwind CSS'] },
+    { category: 'Backend', items: ['Node.js', 'Express', 'Python', 'MongoDB', 'PostgreSQL'] },
+    { category: 'Data Science', items: ['Pandas', 'NumPy', 'Scikit-learn', 'TensorFlow', 'PyTorch'] }
+  ],
+  certifications: [
+    'AWS Certified Machine Learning - Specialty',
+    'Google Data Analytics Professional',
+    'IBM Data Science Professional Certificate'
+  ],
+  tools: ['Git', 'Docker', 'Figma', 'Jupyter', 'VS Code']
+};
+
+const education = [
+  {
+    institution: 'University of Nairobi',
+    degree: 'B.Sc. in Computer Science',
+    period: '2017 - 2021',
+    description: 'Focused on software engineering, data analysis, and machine learning foundations.'
+  },
+  {
+    institution: 'Data Science Academy',
+    degree: 'Certificate in Machine Learning',
+    period: '2022',
+    description: 'Completed practical training in predictive modeling, NLP, and model deployment.'
+  }
+];
+
+const experience = [
+  {
+    company: 'Tech Solutions Ltd.',
+    role: 'Junior Data Scientist',
+    period: '2022 - 2024',
+    description: 'Built data pipelines, trained machine learning models, and delivered actionable insights for clients.'
+  },
+  {
+    company: 'AI Innovate',
+    role: 'Machine Learning Engineer Intern',
+    period: '2021 - 2022',
+    description: 'Developed end-to-end ML workflows and collaborated on deployment of predictive solutions.'
+  }
 ];
 
 const aboutInfo = {
   name: 'Idirissa',
   title: 'Full Stack Developer',
-  bio: 'Passionate about building beautiful and functional web applications. Always learning and exploring new technologies.',
+  bio: 'Passionate about building beautiful and functional web applications. Always learning and exploring new technologies and data-driven solutions.',
   email: 'contact@idirissa.com',
-  phone: '+1 (XXX) XXX-XXXX',
-  location: 'Your Location'
+  phone: '+1 (123) 456-7890',
+  location: 'Nairobi, Kenya',
+  specializations: ['Data Science', 'Machine Learning', 'AI Systems'],
+  languages: ['English', 'French']
 };
 
 // Get all projects
@@ -73,7 +113,25 @@ export const getProjectById = (req, res) => {
 // Get skills
 export const getSkills = (req, res) => {
   try {
-    res.json({ success: true, data: skills });
+    res.json({ success: true, data: skillsData });
+  } catch (error) {
+    res.status(500).json({ success: false, error: error.message });
+  }
+};
+
+// Get education
+export const getEducation = (req, res) => {
+  try {
+    res.json({ success: true, data: education });
+  } catch (error) {
+    res.status(500).json({ success: false, error: error.message });
+  }
+};
+
+// Get experience
+export const getExperience = (req, res) => {
+  try {
+    res.json({ success: true, data: experience });
   } catch (error) {
     res.status(500).json({ success: false, error: error.message });
   }

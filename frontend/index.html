@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Idirissa | Data Scientist & ML Engineer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-brand">
+      <img src="https://i.pravatar.cc/120?img=65" alt="Idirissa logo" class="logo" />
+      <div class="brand-text">
+        <span class="brand-name">Idirissa</span>
+        <span class="brand-subtitle">Data Scientist & ML Engineer</span>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <a href="#home">Home</a>
+      <div class="nav-start-bar"></div>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero section">
+      <div class="hero-grid">
+        <div class="hero-image">
+          <img src="https://images.unsplash.com/photo-1556155092-490a1ba16284?auto=format&fit=crop&w=900&q=80" alt="Data science hero" />
+        </div>
+        <div class="hero-copy">
+          <span class="eyebrow">Welcome to my portfolio</span>
+          <h1>Building intelligent systems for real-world impact.</h1>
+          <p class="hero-text">I design and deploy data-driven solutions, specializing in machine learning, analytics and scalable product engineering.</p>
+          <div class="hero-type">
+            <span>Career</span>
+            <span id="typed-text" class="typed-text"></span>
+          </div>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#contact">Hire me</a>
+            <a class="button button-secondary" href="#about">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section about-section">
+      <div class="section-header">
+        <h2>About Me</h2>
+        <p>My story, skills, and mission in data science and machine learning.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-image-card">
+          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80" alt="About me image" />
+        </div>
+        <div class="about-copy">
+          <p id="about-bio">Loading about bio...</p>
+          <div class="about-details-grid">
+            <div class="detail-card">
+              <span class="detail-title">Specialization</span>
+              <p id="about-specializations">Loading...</p>
+            </div>
+            <div class="detail-card">
+              <span class="detail-title">Languages</span>
+              <p id="about-languages">Loading...</p>
+            </div>
+            <div class="detail-card">
+              <span class="detail-title">Email</span>
+              <p id="about-email">Loading...</p>
+            </div>
+            <div class="detail-card">
+              <span class="detail-title">Location</span>
+              <p id="about-location">Loading...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section skills-section">
+      <div class="section-header">
+        <h2>Skills</h2>
+        <p>A curated view of technical skills, certifications and tools.</p>
+      </div>
+      <div class="skills-grid">
+        <div class="skills-card core-skills">
+          <h3>Core Skills</h3>
+          <div id="skills-list">Loading skill categories...</div>
+        </div>
+        <div class="skills-card certificates">
+          <h3>Certifications</h3>
+          <ul id="skills-certifications">Loading certifications...</ul>
+        </div>
+        <div class="skills-card tools">
+          <h3>Tools</h3>
+          <ul id="skills-tools">Loading tools...</ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section education-section">
+      <div class="section-header">
+        <h2>Education</h2>
+        <p>Formal training and certificates that shape my foundations.</p>
+      </div>
+      <div id="education-list" class="timeline-grid">Loading education...</div>
+    </section>
+
+    <section id="experience" class="section experience-section">
+      <div class="section-header">
+        <h2>Experience</h2>
+        <p>Professional roles where I built machine learning and analytical products.</p>
+      </div>
+      <div id="experience-list" class="timeline-grid">Loading experience...</div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="section-header">
+        <h2>Contact</h2>
+        <p>Send me a message or use the contact details below.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card contact-details">
+          <h3>Contact Info</h3>
+          <div class="contact-info">
+            <div>
+              <span>Email</span>
+              <p id="contact-email">Loading...</p>
+            </div>
+            <div>
+              <span>Phone</span>
+              <p id="contact-phone">Loading...</p>
+            </div>
+            <div>
+              <span>Location</span>
+              <p id="contact-location">Loading...</p>
+            </div>
+            <div>
+              <span>LinkedIn</span>
+              <p id="contact-linkedin">Loading...</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-card contact-form-card">
+          <h3>Send a Message</h3>
+          <form id="contact-form">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required />
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required />
+
+            <label for="subject">Subject</label>
+            <input id="subject" name="subject" type="text" required />
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit" class="button button-primary">Send message</button>
+            <div id="contact-result"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Idirissa. Designed for a responsive data scientist portfolio experience.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

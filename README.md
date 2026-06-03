@@ -6,7 +6,7 @@ A professional full-stack portfolio website for Idirissa.
 
 ```
 idrissa-portfolio/
-├── backend/              # Node.js/Express API
+├── backend/              # Node.js/Express API for Render deployment
 │   ├── src/
 │   │   ├── controllers/
 │   │   ├── routes/
@@ -14,10 +14,16 @@ idrissa-portfolio/
 │   │   ├── app.js
 │   │   └── index.js
 │   ├── package.json
+│   ├── package-lock.json
 │   ├── Dockerfile
 │   ├── docker-compose.yml
 │   └── README.md
-├── frontend/            # (Coming soon) React/Vue frontend
+├── frontend/             # Static frontend for Vercel deployment
+│   ├── index.html
+│   ├── style.css
+│   ├── script.js
+│   ├── vercel.json
+│   └── README.md
 ├── QUICKSTART.md        # Quick start guide
 └── README.md
 ```
@@ -28,8 +34,14 @@ idrissa-portfolio/
 
 1. Navigate to backend folder
 2. Install dependencies: `npm install`
-3. Create `.env` from `.env.example` (already done)
+3. Create `.env` from `.env.example`
 4. Start server: `npm run dev`
+
+### Frontend Setup
+
+1. Navigate to frontend folder
+2. Deploy to Vercel as a static site
+3. Set `apiBaseUrl` in `frontend/script.js` to your Render backend URL, e.g. `https://<your-render-app>.onrender.com/api`
 
 See [QUICKSTART.md](./QUICKSTART.md) for detailed instructions.
 

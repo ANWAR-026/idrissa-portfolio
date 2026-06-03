@@ -1,13 +1,9 @@
 import express from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
-import path from 'path';
-import { fileURLToPath } from 'url';
 import portfolioRoutes from './routes/portfolio.js';
 import contactRoutes from './routes/contact.js';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 const app = express();
 
 // Middleware
@@ -17,11 +13,27 @@ app.use(cors({
 }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, '../public')));
 
 // Health check
 app.get('/api/health', (req, res) => {
   res.json({ status: 'OK', message: 'Server is running' });
+});
+
+// Root API info
+app.get('/', (req, res) => {
+  res.json({
+    status: 'OK',
+    message: 'Idirissa Portfolio Backend API',
+    api: {
+      health: '/api/health',
+      portfolio: '/api/portfolio',
+      about: '/api/portfolio/about/info',
+      skills: '/api/portfolio/skills/all',
+      education: '/api/portfolio/education',
+      experience: '/api/portfolio/experience',
+      contact: '/api/contact/submit'
+    }
+  });
 });
 
 // Routes

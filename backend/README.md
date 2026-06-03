@@ -79,19 +79,22 @@ docker run -p 5000:5000 --env-file .env idirissa-portfolio-backend
 
 ## Deployment Options
 
+- frontend: Deploy `frontend/` to Vercel as a static site.
+- backend: Deploy `backend/` to Render as a Node.js web service.
+
 ### Heroku
 1. Install Heroku CLI
 2. Create Procfile (included)
 3. Deploy: `git push heroku main`
 
 ### Vercel
-- Supported for serverless deployment
+- Use the `frontend/` folder to deploy a static frontend.
 
 ### AWS/DigitalOcean
 - Use Docker image for deployment
 
 ### Railway.app / Render
-- Connect GitHub repository and deploy automatically
+- Use the `backend/` folder to deploy automatically
 
 ## Project Structure
 

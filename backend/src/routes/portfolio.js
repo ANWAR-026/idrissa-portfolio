@@ -12,6 +12,12 @@ router.get('/skills/all', portfolioController.getSkills);
 // GET about info
 router.get('/about/info', portfolioController.getAboutInfo);
 
+// GET education
+router.get('/education', portfolioController.getEducation);
+
+// GET experience
+router.get('/experience', portfolioController.getExperience);
+
 // GET a single portfolio item
 router.get('/:id', portfolioController.getProjectById);
 

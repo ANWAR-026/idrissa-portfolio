@@ -1,3 +1,11 @@
+const contactInfo = {
+  email: 'contact@idirissa.com',
+  phone: '+1 (123) 456-7890',
+  location: 'Nairobi, Kenya',
+  website: 'https://idirissa-portfolio.onrender.com',
+  linkedin: 'https://linkedin.com/in/idirissa'
+};
+
 // Contact form handler
 export const submitContactForm = (req, res) => {
   try {
@@ -20,11 +28,6 @@ export const submitContactForm = (req, res) => {
       });
     }
 
-    // Here you would typically:
-    // 1. Save to database
-    // 2. Send email notification
-    // 3. Send confirmation email to user
-    
     console.log('New contact form submission:', {
       name,
       email,
@@ -50,5 +53,13 @@ export const submitContactForm = (req, res) => {
       success: false,
       error: 'Failed to submit contact form'
     });
+  }
+};
+
+export const getContactInfo = (req, res) => {
+  try {
+    res.json({ success: true, data: contactInfo });
+  } catch (error) {
+    res.status(500).json({ success: false, error: error.message });
   }
 };
