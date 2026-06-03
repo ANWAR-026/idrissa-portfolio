@@ -6,13 +6,13 @@ const router = express.Router();
 // GET all portfolio items
 router.get('/', portfolioController.getAllProjects);
 
-// GET a single portfolio item
-router.get('/:id', portfolioController.getProjectById);
-
 // GET skills
 router.get('/skills/all', portfolioController.getSkills);
 
 // GET about info
 router.get('/about/info', portfolioController.getAboutInfo);
+
+// GET a single portfolio item
+router.get('/:id', portfolioController.getProjectById);
 
 export default router;
